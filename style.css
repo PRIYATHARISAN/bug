@@ -1,0 +1,150 @@
+Comprehensive Git Study Material: Fundamentals &amp; Commands
+1. Introduction to Git
+Git is a distributed version control system that allows efficient tracking of code changes,
+collaboration between developers, and version management. It helps maintain different
+versions of a project while ensuring seamless teamwork.
+2. User Configuration &amp; Identity Setup
+Before working with Git, users should configure their credentials to track commits
+properly.
+ Set Username &amp; Email Address
+ git config --global user.name &quot;Your Name&quot;
+ git config --global user.email &quot;your-email@example.com&quot;
+ View Configurations
+ git config --list
+ Modify Configuration for a Specific Repository
+ git config --local user.name &quot;Project-Specific Name&quot;
+3. Repository Management
+Initializing a Local Repository
+ Create a new Git repository
+ git init
+Checking Repository Status
+ View the status of modified and staged files
+ git status
+4. Working with Remote Repositories
+Connecting to a Remote Repository
+ Add a remote repository URL
+ git remote add origin &lt;repository-url&gt;
+ Verify remote repositories
+ git remote -v
+Cloning an Existing Repository
+ Copy a remote repository to your local system
+ git clone &lt;repository-url&gt;
+Removing Remote Repository
+
+ Remove the linked remote repository
+ git remote remove origin
+5. File Tracking &amp; Commit Workflow
+Adding Changes to Staging Area
+ Stage specific files
+ git add &lt;file-name&gt;
+ Stage all changes
+ git add .
+Committing Changes
+ Save a snapshot of changes
+ git commit -m &quot;Detailed commit message&quot;
+ Modify previous commit
+ git commit --amend
+Viewing Commit History
+ Display log of commits
+ git log
+ Compact commit log
+ git log --oneline
+6. Branching &amp; Collaboration
+Creating and Managing Branches
+ Create a new branch
+ git branch &lt;branch-name&gt;
+ Switch to a specific branch
+ git checkout &lt;branch-name&gt;
+Merging Changes
+ Merge a branch into the main repository
+ git checkout main
+ git merge &lt;branch-name&gt;
+Deleting a Branch
+ Delete a local branch
+ git branch -d &lt;branch-name&gt;
+ Force delete a branch (if conflicts exist)
+ git branch -D &lt;branch-name&gt;
+7. Synchronizing with Remote Repository
+
+Pulling Latest Updates
+ Download and integrate changes from the remote repository
+ git pull origin main
+Pushing Local Changes
+ Send commits to the remote repository
+ git push origin main
+8. Handling Merge Conflicts
+Identifying Merge Issues
+ Check file conflict status
+ git status
+Resolving Conflicts
+ Open conflicting files, edit manually, and finalize resolution.
+ Mark conflict resolution
+ git add &lt;resolved-file&gt;
+ git commit -m &quot;Resolved merge conflict&quot;
+9. Undoing Changes &amp; Resetting
+Reverting Changes
+ Unstage files before commit
+ git reset HEAD &lt;file-name&gt;
+ Discard local modifications
+ git checkout -- &lt;file-name&gt;
+ Reset repository to a previous commit
+ git reset --hard &lt;commit-hash&gt;
+10. Repository Cleanup &amp; Deletion
+Removing Local Repository
+ Delete the repository directory
+ rm -rf &lt;repository-folder&gt;
+Deleting Remote Repository
+ Navigate to the repository settings on GitHub and delete the project.
+This refined material now includes additional essential commands to provide a thorough
+understanding of Git operations. Would you like me to create structured exercises or a
+quiz to reinforce learning?
+
+Add more
+Absolutely! Here are more essential Git commands and advanced concepts to make this
+study material even more comprehensive.
+Extended Git Study Material: Advanced Commands &amp; Features
+11. Reviewing Repository History
+Understanding past changes and contributions is crucial in tracking progress.
+ View detailed commit history
+ git log --graph --decorate --all
+ View changes between commits
+ git diff &lt;commit-hash1&gt; &lt;commit-hash2&gt;
+ Show details of a specific commit
+ git show &lt;commit-hash&gt;
+12. Working with Tags
+Tags help mark important milestones, such as software releases.
+ Create an annotated tag
+ git tag -a v1.0 -m &quot;Version 1.0 Release&quot;
+ List all tags
+ git tag
+ Push tags to remote
+ git push origin --tags
+ Delete a tag
+ git tag -d v1.0
+13. Stashing Changes
+Stashing temporarily saves unfinished work without committing.
+ Save changes in a temporary stash
+ git stash
+ View stored stashes
+ git stash list
+ Apply a stash
+ git stash apply
+ Clear all stashes
+ git stash clear
+14. Rewriting History
+Sometimes, changes need to be altered before pushing them.
+
+ Modify the last commit message
+ git commit --amend -m &quot;New commit message&quot;
+ Rebase commits for cleaner history
+ git rebase -i HEAD~3
+ Undo pushed commits
+ git revert &lt;commit-hash&gt;
+ Reset repository to a previous state
+ git reset --hard &lt;commit-hash&gt;
+15. Collaborating with Multiple Users
+Working with other contributors requires managing different versions effectively.
+ List contributors in the repository
+ git shortlog -s -n
+ Assign collaborator roles on platforms like GitHub
+o Navigate to repository settings → Manage access → Add collaborator.
