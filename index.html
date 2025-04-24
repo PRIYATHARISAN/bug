@@ -1,0 +1,123 @@
+Microsoft Windows [Version 10.0.26100.3775]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\priya>mkdir budget
+
+C:\Users\priya>cd budget
+
+C:\Users\priya\budget>git --init
+unknown option: --init
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+C:\Users\priya\budget>git init
+Initialized empty Git repository in C:/Users/priya/budget/.git/
+
+C:\Users\priya\budget>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        script.js
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\priya\budget>git add .
+
+C:\Users\priya\budget>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+
+C:\Users\priya\budget>git commit -m "added base file"
+[master (root-commit) 2751338] added base file
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 script.js
+ create mode 100644 style.css
+
+C:\Users\priya\budget>
+C:\Users\priya\budget>git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+C:\Users\priya\budget>git remote add origin https://github.com/PRIYATHARISAN/bug.git
+
+C:\Users\priya\budget>git init
+Reinitialized existing Git repository in C:/Users/priya/budget/.git/
+
+C:\Users\priya\budget>git add .
+
+C:\Users\priya\budget>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\priya\budget>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/PRIYATHARISAN/bug.git'
+
+C:\Users\priya\budget>git pull origin main --rebase
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 863 bytes | 41.00 KiB/s, done.
+From https://github.com/PRIYATHARISAN/bug
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/master.
+
+C:\Users\priya\budget>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/PRIYATHARISAN/bug.git'
+
+C:\Users\priya\budget>git branch -M main
+
+C:\Users\priya\budget>git pull origin main --rebase
+From https://github.com/PRIYATHARISAN/bug
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+
+C:\Users\priya\budget>git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 317.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/PRIYATHARISAN/bug.git
+   cb2ac75..08dfa85  main -> main
+
+C:\Users\priya\budget>git clone https://github.com/PRIYATHARISAN/bug.git
+Cloning into 'bug'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+C:\Users\priya\budget>
